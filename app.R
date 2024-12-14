@@ -1,99 +1,14 @@
-install.packages('reticulate')
 
 # app.R
 library(shiny)
 library(Matrix)
 library(shinydashboard)
-library(reticulate)
-library(scales)
 library(DT)
 library(plotly)
 library(xgboost)
-library(caret)
-reticulate::py_install("xgboost")
-reticulate::py_install("scikit-learn")
 
-#Model----
-data <- `ICRE_df_model.(1)`
 
-# Start with data selection to match Python exactly
-df_model <- data[c(numerical_features, categorical_features, "Sale.Price")]
-
-# Do train/test split first
-set.seed(42)
-train_index <- createDataPartition(df_model$Sale.Price, p = 0.8, list = FALSE)
-train_data <- df_model[train_index, ]
-test_data <- df_model[-train_index, ]
-
-# One-hot encode categorical variables with drop_first=TRUE
-cat_formula <- as.formula(paste("~", paste(categorical_features, collapse = " + ")))  # Removed -1
-train_dummies <- model.matrix(cat_formula, data = train_data)[, -1]  # -1 removes intercept (equivalent to drop_first)
-test_dummies <- model.matrix(cat_formula, data = test_data)[, -1]
-
-# Scale numerical features after split
-scaler <- preProcess(train_data[numerical_features], method = c("center", "scale"))
-train_data_scaled <- predict(scaler, train_data[numerical_features])
-test_data_scaled <- predict(scaler, test_data[numerical_features])
-
-# Combine features
-train_matrix <- cbind(as.matrix(train_data_scaled), train_dummies)
-test_matrix <- cbind(as.matrix(test_data_scaled), test_dummies)
-colnames(test_matrix) <- colnames(train_matrix)
-
-# Train model with unscaled target
-xgb_model <- xgboost(
-  data = train_matrix,
-  label = train_data$Sale.Price,  # Unscaled target
-  params = list(
-    objective = "reg:squarederror",
-    max_depth = 3,
-    eta = 0.05,
-    min_child_weight = 7,
-    subsample = 0.5,
-    colsample_bytree = 0.5,
-    gamma = 0.5,
-    alpha = 0.1,
-    lambda = 0.1
-  ),
-  nrounds = 100,
-  verbose = 0
-)
-
-# Calculate metrics using unscaled predictions
-train_pred <- predict(xgb_model, train_matrix)
-test_pred <- predict(xgb_model, test_matrix)
-
-# Calculate metrics to match Python's
-train_r2 <- 1 - sum((train_data$Sale.Price - train_pred)^2) / 
-  sum((train_data$Sale.Price - mean(train_data$Sale.Price))^2)
-test_r2 <- 1 - sum((test_data$Sale.Price - test_pred)^2) / 
-  sum((test_data$Sale.Price - mean(test_data$Sale.Price))^2)
-
-train_mse <- mean((train_data$Sale.Price - train_pred)^2)
-test_mse <- mean((test_data$Sale.Price - test_pred)^2)
-
-train_mae <- mean(abs(train_data$Sale.Price - train_pred))
-test_mae <- mean(abs(test_data$Sale.Price - test_pred))
-
-print("Training Metrics:")
-print(paste("  Mean Squared Error:", format(train_mse, scientific = TRUE)))
-print(paste("  R-squared:", round(train_r2, 4)))
-print(paste("  Mean Absolute Error:", round(train_mae, 4)))
-
-print("\nTesting Metrics:")
-print(paste("  Mean Squared Error:", format(test_mse, scientific = TRUE)))
-print(paste("  R-squared:", round(test_r2, 4)))
-print(paste("  Mean Absolute Error:", round(test_mae, 4)))
-
-# Save everything needed for predictions
-saveRDS(list(
-  model = xgb_model,
-  scaler = scaler,
-  categorical_formula = cat_formula,
-  dummy_names = dummy_names,
-  feature_names = colnames(train_matrix),
-  numerical_features = numerical_features
-), "industrial_re_model.rds")
+options(repos = c(CRAN = "https://cran.rstudio.com/"))
 
 #Dashboard----
 
