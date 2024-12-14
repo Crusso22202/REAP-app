@@ -1,0 +1,60 @@
+﻿Rank,Port name,State,Total trade,Domestic total,Foreign total,Foreign imports,Foreign exports
+(by total trade),,,,,,,
+1,Port of Houston,Texas,"275,940,289","79,177,826","196,762,463","56,970,738","139,791,725"
+2,Port of South Louisiana,Louisiana,"225,086,697","112,372,057","112,714,640","30,423,984","82,290,656"
+3,Port of Corpus Christi,Texas,"150,755,485","25,056,307","125,699,178","17,606,086","108,093,092"
+4,Port of New York and New Jersey,New Jersey,"123,697,438","40,087,797","83,609,641","68,357,078","15,252,563"
+,Port Newark,New York,,,,,
+5,Port of New Orleans,Louisiana,"81,067,448","43,220,217","37,847,231","15,324,118","22,523,113"
+6,Port of Long Beach,California,"79,178,087","13,490,353","65,687,734","46,552,104","19,135,630"
+7,Port of Greater Baton Rouge,Louisiana,"71,686,872","43,420,458","28,266,414","5,662,827","22,603,587"
+8,Port of Beaumont,Texas,"70,567,386","24,785,761","45,781,625","16,170,960","29,610,665"
+9,Port of Los Angeles,California,"59,452,139","4,501,365","54,950,774","38,658,365","16,292,409"
+10,Port of Hampton Roads,Virginia,"58,048,785","4,956,369","53,092,416","12,362,773","40,729,643"
+11,Port of Mobile,Alabama,"53,206,561","18,794,083","34,412,478","17,859,999","16,552,479"
+12,Plaquemines Port,Louisiana,"46,750,799","25,879,971","20,870,828","4,555,969","16,314,859"
+13,Port of Savannah,Georgia,"43,453,044","1,135,777","42,317,267","24,505,366","17,811,901"
+14,Port of Lake Charles,Louisiana,"43,053,658","20,333,504","22,720,154","5,026,406","17,693,748"
+15,Port of Port Arthur,Texas,"41,222,200","17,297,108","23,925,092","7,316,835","16,608,257"
+16,Port Freeport,Texas,"38,748,662","4,171,925","34,576,737","6,560,377","28,016,360"
+17,Mid-Ohio Valley Port,Ohio,"35,939,474","35,939,474",0,0,0
+,,West Virginia,,,,,
+18,Port of Baltimore,Maryland,"35,202,027","4,211,847","30,990,180","12,937,138","18,053,042"
+19,Ports of Cincinnati-Northern KY,Ohio,"34,476,340","34,476,340",0,0,0
+,,Kentucky,,,,,
+20,Port of Texas City,Texas,"33,721,312","12,540,971","21,180,341","7,601,309","13,579,032"
+21,Port of St. Louis and East St. Louis,Missouri,"30,487,796","30,487,796",0,0,0
+,,Illinois,,,,,
+22,Port of Huntington Tri-State,West Virginia,"29,699,657","29,699,657",0,0,0
+,,Kentucky,,,,,
+,,Ohio,,,,,
+23,Port of Philadelphia,Pennsylvania,"28,517,760","11,589,634","16,928,126","9,833,680","7,094,446"
+24,Port of Tampa Bay,Florida,"28,511,760","15,913,148","12,598,612","8,250,523","4,348,089"
+25,Valdez,Alaska,"25,113,231","23,019,746","2,093,485",0,"2,093,485"
+26,Twin Ports of Duluth and Superior,Minnesota,"25,071,110","19,363,238","5,707,872","692,776","5,015,096"
+,,Wisconsin,,,,,
+27,Port of Charleston,South Carolina,"24,947,482","1,822,973","23,124,509","14,996,099","8,128,410"
+28,Northern Indiana Maritime District,Indiana,"24,684,060","24,128,574","555,486","512,759","42,727"
+29,Pascagoula,Mississippi,"23,096,778","8,311,645","14,785,133","7,450,788","7,334,345"
+30,Port of Seattle,Washington,"22,964,546","4,814,772","18,149,774","9,098,134","9,051,640"
+31,Port of Tacoma,Washington,"21,575,059","4,186,844","17,388,215","5,794,811","11,593,404"
+32,Port of Richmond,California,"21,050,741","6,277,538","14,773,203","11,494,554","3,278,649"
+33,Port of Portland,Oregon,"20,706,345","6,391,344","14,315,001","2,218,431","12,096,570"
+34,Port Everglades,Florida,"20,440,573","11,177,768","9,262,805","6,498,551","2,764,254"
+35,South Jersey,New Jersey,"20,254,325","8,383,229","11,871,096","11,271,285","599,811"
+36,Port of Oakland,California,"19,439,762","1,313,835","18,125,927","8,520,142","9,605,785"
+37,Kalama,Washington,"18,140,886","1,393,416","16,747,470","328,888","16,418,582"
+38,Port of Jacksonville,Florida,"16,701,370","7,892,986","8,808,384","7,379,715","1,428,669"
+39,Port of Pittsburgh,Pennsylvania,"15,536,051","15,536,051",0,0,0
+40,New Bourbon Port Authority,Missouri,"15,506,754","15,506,754",0,0,0
+41,Mid-America Port,Iowa,"14,952,343","14,952,343",0,0,0
+,,Illinois,,,,,
+,,Missouri,,,,,
+42,Illinois Waterway Ports,Illinois,"14,946,034","14,946,034",0,0,0
+43,Two Harbors,Minnesota,"13,499,847","11,746,091","1,753,756",0,"1,753,756"
+44,Port of Boston,Massachusetts,"13,322,582","3,399,778","9,922,804","8,310,101","1,612,703"
+45,Port of Honolulu,Hawaii,"12,261,506","11,424,582","836,924","619,948","216,976"
+46,Port of Galveston,Texas,"11,945,182","5,242,679","6,702,503","1,525,032","5,177,471"
+47,Port of Longview,Washington,"11,071,285","1,145,333","9,925,952","338,172","9,587,780"
+48,Port of Vancouver USA,Washington,"10,198,602","2,557,938","7,640,664","1,128,602","6,512,062"
+49,Port of Cleveland,Ohio,"9,442,739","7,655,827","1,786,912","1,359,394","427,518"
